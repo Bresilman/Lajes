@@ -1,0 +1,22 @@
+{
+  "casos_marcus": {
+    "1": {
+      "nome": "Quatro bordas apoiadas",
+      "dados": [
+        { "lambda": 1.0, "alpha_x": 27.4, "alpha_y": 27.4, "mu_x": 0.50, "mu_y": 0.50 },
+        { "lambda": 1.2, "alpha_x": 19.3, "alpha_y": 32.1, "mu_x": 0.58, "mu_y": 0.42 },
+        { "lambda": 1.5, "alpha_x": 12.9, "alpha_y": 42.5, "mu_x": 0.66, "mu_y": 0.34 },
+        { "lambda": 2.0, "alpha_x": 8.4,  "alpha_y": 68.2, "mu_x": 0.76, "mu_y": 0.24 }
+      ]
+    },
+    "6": {
+      "nome": "Quatro bordas engastadas",
+      "dados": [
+        { "lambda": 1.0, "alpha_x": 58.3, "alpha_y": 58.3, "mu_x": 0.50, "mu_y": 0.50 },
+        { "lambda": 1.2, "alpha_x": 45.7, "alpha_y": 70.1, "mu_x": 0.60, "mu_y": 0.40 },
+        { "lambda": 1.5, "alpha_x": 34.4, "alpha_y": 94.3, "mu_x": 0.70, "mu_y": 0.30 },
+        { "lambda": 2.0, "alpha_x": 24.7, "alpha_y": 150.0, "mu_x": 0.80, "mu_y": 0.20 }
+      ]
+    }
+  }
+}

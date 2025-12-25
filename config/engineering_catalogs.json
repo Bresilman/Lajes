@@ -1,0 +1,65 @@
+{
+  "bitolas_padrao": [
+    { "id": "5.0",  "diametro_mm": 5.0,  "area_cm2": 0.20, "massa_kg_m": 0.154 },
+    { "id": "6.3",  "diametro_mm": 6.3,  "area_cm2": 0.315, "massa_kg_m": 0.245 },
+    { "id": "8.0",  "diametro_mm": 8.0,  "area_cm2": 0.50, "massa_kg_m": 0.395 },
+    { "id": "10.0", "diametro_mm": 10.0, "area_cm2": 0.785, "massa_kg_m": 0.617 },
+    { "id": "12.5", "diametro_mm": 12.5, "area_cm2": 1.23, "massa_kg_m": 0.963 },
+    { "id": "16.0", "diametro_mm": 16.0, "area_cm2": 2.01, "massa_kg_m": 1.580 }
+  ],
+
+  "elementos_enchimento": [
+    {
+      "tipo": "CERAMICA",
+      "modelo": "H8_25_30",
+      "descricao": "Lajota Cerâmica H8 Comum",
+      "altura_h_cm": 8.0,
+      "largura_b_cm": 25.0,
+      "comprimento_cm": 30.0,
+      "peso_unitario_kg": 3.4,
+      "observacoes": "Consumo aprox 11 pçs/m²"
+    },
+    {
+      "tipo": "EPS",
+      "modelo": "EPS_H8_33_100",
+      "descricao": "Isopor H8 Recortado",
+      "altura_h_cm": 8.0,
+      "largura_b_cm": 33.0,
+      "comprimento_cm": 100.0,
+      "peso_unitario_kg": 0.4,
+      "densidade_kg_m3": 13.0
+    },
+    {
+      "tipo": "EPS",
+      "modelo": "EPS_H12_40_100",
+      "descricao": "Isopor H12 Recortado Largo",
+      "altura_h_cm": 12.0,
+      "largura_b_cm": 40.0,
+      "comprimento_cm": 100.0,
+      "peso_unitario_kg": 0.6,
+      "densidade_kg_m3": 13.0
+    }
+  ],
+
+  "truss_standard": [
+    {
+      "modelo": "TR08644",
+      "altura_h_cm": 8.0,
+      "banzo_sup_mm": 6.0,
+      "banzo_inf_mm": [4.2, 4.2],
+      "sinusoide_mm": 4.2
+    },
+    {
+      "modelo": "TR12645",
+      "altura_h_cm": 12.0,
+      "banzo_sup_mm": 6.0,
+      "banzo_inf_mm": [5.0, 5.0],
+      "sinusoide_mm": 4.2
+    }
+  ],
+
+  "configuracoes_nervura": {
+    "largura_sapata_padrao_cm": 13.0,
+    "espessura_sapata_cm": 3.0
+  }
+}
