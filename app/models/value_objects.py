@@ -19,7 +19,7 @@ class CondicaoContorno(Enum):
 class Materiais:
     fck: float
     fyk: float
-    Ecs: float
+    Ecs: float # Módulo em GPa
     gamma_c: float = settings.GAMMA_C
     gamma_s: float = settings.GAMMA_S
 
@@ -49,7 +49,12 @@ class AnalysisResult:
     reacoes_apoio: Dict[str, float]
     volume_concreto: float
     peso_aco_estimado: float
+    taxa_aco_m2: float
+    consumo_concreto_m2: float
+    cobrimento_mm: float
     flecha_total_mm: float
     flecha_limite_mm: float
+    contraflecha_mm: float
+    wk_max_mm: float
     status_servico: str
     status_geral: str

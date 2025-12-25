@@ -1,0 +1,54 @@
+{
+    "tipo_laje": "LajeMacica",
+    "lx": 4.0,
+    "ly": 5.0,
+    "h_cm": 12.0,
+    "d_cm": 9.0,
+    "peso_proprio": 3.0,
+    "carga_total_distribuida": 6.0,
+    "momentos_kNm": {
+        "mx": 7.37,
+        "my": 3.97,
+        "mx_neg": 0.0,
+        "my_neg": 0.0,
+        "v_sd_x": 19.92,
+        "v_sd_y": 13.68,
+        "reacao_viga_x": 8.4,
+        "reacao_viga_y": 10.08
+    },
+    "as_teorico": {
+        "mx": 1.93,
+        "my": 1.8,
+        "mx_neg": 0.0,
+        "my_neg": 0.0
+    },
+    "cortante": {
+        "v_sd": 19.92,
+        "v_rd1": 56.02,
+        "ratio": 0.356,
+        "status": "OK"
+    },
+    "detalhamento": {
+        "mx": "Ø5.0 c/10",
+        "my": "Ø6.3 c/17.5",
+        "mx_neg": "Mínima/Dispensa",
+        "my_neg": "Mínima/Dispensa"
+    },
+    "reacoes_apoio": {
+        "Esquerda": 10.08,
+        "Direita": 10.08,
+        "Topo": 8.4,
+        "Fundo": 8.4
+    },
+    "volume_concreto": 2.4,
+    "peso_aco_estimado": 67.6,
+    "taxa_aco_m2": 3.38,
+    "consumo_concreto_m2": 0.12,
+    "cobrimento_mm": 25.0,
+    "flecha_total_mm": 12.68,
+    "flecha_limite_mm": 16.0,
+    "contraflecha_mm": 6.0,
+    "wk_max_mm": 0.2,
+    "status_servico": "OK",
+    "status_geral": "APROVADO"
+}
