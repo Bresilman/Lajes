@@ -1,0 +1,152 @@
+{
+    "V1": {
+        "id": "V1",
+        "geometria_estimada": "15x40",
+        "cargas_distribuidas": [
+            {
+                "origem": "L1",
+                "valor_kNm": 10.08,
+                "tipo": "Linear (Reacao Laje)",
+                "comprimento_atuacao": 5.0
+            }
+        ],
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "fim": {
+                "x": 0.0,
+                "y": 5.0
+            },
+            "comprimento_total": 5.0
+        }
+    },
+    "V2": {
+        "id": "V2",
+        "geometria_estimada": "15x40",
+        "cargas_distribuidas": [
+            {
+                "origem": "L1",
+                "valor_kNm": 10.08,
+                "tipo": "Linear (Reacao Laje)",
+                "comprimento_atuacao": 5.0
+            },
+            {
+                "origem": "L2",
+                "valor_kNm": 8.82,
+                "tipo": "Linear (Reacao Laje)",
+                "comprimento_atuacao": 5.0
+            }
+        ],
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 4.0,
+                "y": 0.0
+            },
+            "fim": {
+                "x": 4.0,
+                "y": 5.0
+            },
+            "comprimento_total": 5.0
+        }
+    },
+    "V3": {
+        "id": "V3",
+        "geometria_estimada": "15x40",
+        "cargas_distribuidas": [
+            {
+                "origem": "L1",
+                "valor_kNm": 8.4,
+                "tipo": "Linear (Reacao Laje)",
+                "comprimento_atuacao": 4.0
+            }
+        ],
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 0.0,
+                "y": 5.0
+            },
+            "fim": {
+                "x": 4.0,
+                "y": 5.0
+            },
+            "comprimento_total": 4.0
+        }
+    },
+    "V4": {
+        "id": "V4",
+        "geometria_estimada": "15x40",
+        "cargas_distribuidas": [
+            {
+                "origem": "L1",
+                "valor_kNm": 8.4,
+                "tipo": "Linear (Reacao Laje)",
+                "comprimento_atuacao": 4.0
+            },
+            {
+                "origem": "L2",
+                "valor_kNm": 8.82,
+                "tipo": "Linear (Reacao Laje)",
+                "comprimento_atuacao": 5.0
+            }
+        ],
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 0.0,
+                "y": 1.25
+            },
+            "fim": {
+                "x": 7.0,
+                "y": 1.25
+            },
+            "comprimento_total": 7.0
+        }
+    },
+    "V5": {
+        "id": "V5",
+        "geometria_estimada": "15x40",
+        "cargas_distribuidas": [
+            {
+                "origem": "L2",
+                "valor_kNm": 6.3,
+                "tipo": "Linear (Reacao Laje)",
+                "comprimento_atuacao": 3.0
+            }
+        ],
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 4.0,
+                "y": 5.0
+            },
+            "fim": {
+                "x": 7.0,
+                "y": 5.0
+            },
+            "comprimento_total": 3.0
+        }
+    },
+    "V6": {
+        "id": "V6",
+        "geometria_estimada": "15x40",
+        "cargas_distribuidas": [
+            {
+                "origem": "L2",
+                "valor_kNm": 6.3,
+                "tipo": "Linear (Reacao Laje)",
+                "comprimento_atuacao": 3.0
+            }
+        ],
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 4.0,
+                "y": 0.0
+            },
+            "fim": {
+                "x": 7.0,
+                "y": 0.0
+            },
+            "comprimento_total": 3.0
+        }
+    }
+}

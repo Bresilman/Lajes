@@ -1,0 +1,110 @@
+{
+    "V1": {
+        "id": "V1",
+        "geometria_estimada": "15x40",
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "fim": {
+                "x": 0.0,
+                "y": 5.0
+            },
+            "comprimento_total": 5.0
+        },
+        "cargas_distribuidas": [
+            {
+                "origem": "L1",
+                "valor_kNm": 11.76,
+                "tipo": "Reacao Vertical",
+                "posicao_na_viga": {
+                    "inicio": 0.0,
+                    "fim": 5.0,
+                    "comprimento": 5.0
+                }
+            }
+        ]
+    },
+    "V2": {
+        "id": "V2",
+        "geometria_estimada": "15x40",
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 4.0,
+                "y": 0.0
+            },
+            "fim": {
+                "x": 4.0,
+                "y": 5.0
+            },
+            "comprimento_total": 5.0
+        },
+        "cargas_distribuidas": [
+            {
+                "origem": "L1",
+                "valor_kNm": 11.76,
+                "tipo": "Reacao Vertical",
+                "posicao_na_viga": {
+                    "inicio": 0.0,
+                    "fim": 5.0,
+                    "comprimento": 5.0
+                }
+            }
+        ]
+    },
+    "V3": {
+        "id": "V3",
+        "geometria_estimada": "15x40",
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 0.0,
+                "y": 5.0
+            },
+            "fim": {
+                "x": 4.0,
+                "y": 5.0
+            },
+            "comprimento_total": 4.0
+        },
+        "cargas_distribuidas": [
+            {
+                "origem": "L1",
+                "valor_kNm": 9.8,
+                "tipo": "Reacao Vertical",
+                "posicao_na_viga": {
+                    "inicio": 0.0,
+                    "fim": 4.0,
+                    "comprimento": 4.0
+                }
+            }
+        ]
+    },
+    "V4": {
+        "id": "V4",
+        "geometria_estimada": "15x40",
+        "coordenadas_globais": {
+            "inicio": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "fim": {
+                "x": 4.0,
+                "y": 0.0
+            },
+            "comprimento_total": 4.0
+        },
+        "cargas_distribuidas": [
+            {
+                "origem": "L1",
+                "valor_kNm": 9.8,
+                "tipo": "Reacao Vertical",
+                "posicao_na_viga": {
+                    "inicio": 0.0,
+                    "fim": 4.0,
+                    "comprimento": 4.0
+                }
+            }
+        ]
+    }
+}

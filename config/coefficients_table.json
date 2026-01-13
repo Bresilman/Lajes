@@ -1,7 +1,7 @@
 {
   "casos_marcus": {
     "1": {
-      "nome": "Quatro bordas apoiadas",
+      "nome": "1. Quatro bordas apoiadas",
       "dados": [
         { "lambda": 1.0, "alpha_x": 27.4, "alpha_y": 27.4, "mu_x": 0.50, "mu_y": 0.50 },
         { "lambda": 1.2, "alpha_x": 19.3, "alpha_y": 32.1, "mu_x": 0.58, "mu_y": 0.42 },
@@ -9,8 +9,40 @@
         { "lambda": 2.0, "alpha_x": 8.4,  "alpha_y": 68.2, "mu_x": 0.76, "mu_y": 0.24 }
       ]
     },
+    "2": {
+      "nome": "2. Três bordas apoiadas e 1 engastada (Menor)",
+      "dados": [
+        { "lambda": 1.0, "alpha_x": 36.2, "alpha_y": 36.2, "mu_x": 0.50, "mu_y": 0.50 },
+        { "lambda": 1.5, "alpha_x": 17.5, "alpha_y": 57.6, "mu_x": 0.66, "mu_y": 0.34 },
+        { "lambda": 2.0, "alpha_x": 11.4, "alpha_y": 91.8, "mu_x": 0.76, "mu_y": 0.24 }
+      ]
+    },
+    "3": {
+      "nome": "3. Duas bordas adjacentes engastadas (Canto)",
+      "dados": [
+        { "lambda": 1.0, "alpha_x": 42.0, "alpha_y": 42.0, "mu_x": 0.50, "mu_y": 0.50 },
+        { "lambda": 1.5, "alpha_x": 22.0, "alpha_y": 65.0, "mu_x": 0.66, "mu_y": 0.34 },
+        { "lambda": 2.0, "alpha_x": 14.5, "alpha_y": 105.0, "mu_x": 0.76, "mu_y": 0.24 }
+      ]
+    },
+    "4": {
+      "nome": "4. Duas bordas opostas engastadas (Menor)",
+      "dados": [
+        { "lambda": 1.0, "alpha_x": 45.5, "alpha_y": 32.5, "mu_x": 0.50, "mu_y": 0.50 },
+        { "lambda": 1.5, "alpha_x": 23.5, "alpha_y": 55.0, "mu_x": 0.66, "mu_y": 0.34 },
+        { "lambda": 2.0, "alpha_x": 16.0, "alpha_y": 95.0, "mu_x": 0.76, "mu_y": 0.24 }
+      ]
+    },
+    "5": {
+      "nome": "5. Três bordas engastadas (Forma de U)",
+      "dados": [
+        { "lambda": 1.0, "alpha_x": 51.5, "alpha_y": 51.5, "mu_x": 0.50, "mu_y": 0.50 },
+        { "lambda": 1.5, "alpha_x": 28.0, "alpha_y": 80.0, "mu_x": 0.66, "mu_y": 0.34 },
+        { "lambda": 2.0, "alpha_x": 19.5, "alpha_y": 125.0, "mu_x": 0.76, "mu_y": 0.24 }
+      ]
+    },
     "6": {
-      "nome": "Quatro bordas engastadas",
+      "nome": "6. Quatro bordas engastadas",
       "dados": [
         { "lambda": 1.0, "alpha_x": 58.3, "alpha_y": 58.3, "mu_x": 0.50, "mu_y": 0.50 },
         { "lambda": 1.2, "alpha_x": 45.7, "alpha_y": 70.1, "mu_x": 0.60, "mu_y": 0.40 },
