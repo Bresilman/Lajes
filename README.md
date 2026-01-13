@@ -1,83 +1,110 @@
-PyLaje - Revisão de Estado Atual (v0.1 - Estável)
+PyLaje 🏗️
 
-1. Visão Geral
+Sistema Integrado para Dimensionamento de Lajes em Concreto Armado (NBR 6118:2023)
 
-Software modular em Python para dimensionamento e verificação de lajes de concreto armado (Maciças e Treliçadas/Nervuradas) conforme a NBR 6118:2023. O sistema utiliza uma arquitetura MVC estrita, permitindo fácil expansão para outros elementos estruturais (Vigas, Pilares).
+O PyLaje é um software open-source de engenharia estrutural desenvolvido em Python. Ele combina a agilidade do dimensionamento tabular (Métodos de Marcus/Bares) com a precisão de verificações refinadas de norma (Flecha de Branson, Fissuração, Cisalhamento em Nervuradas).
 
-2. Arquitetura Implementada
+O sistema opera com uma arquitetura MVC (Model-View-Controller) robusta e foca na interoperabilidade, gerando inputs precisos para softwares de vigas e pórticos.
 
-Padrão: MVC (Model-View-Controller) + Strategy Pattern para motores de cálculo.
+🚀 Funcionalidades Principais
 
-Isolamento:
+1. Engenharia e Norma
 
-Models: Classes puras de dados (Laje, Materiais) com polimorfismo para cálculo de propriedades geométricas (Inércia T vs Retangular).
+Lajes Maciças e Nervuradas (Treliçadas): Cálculo preciso da inércia (Seção T vs Retangular).
 
-Engines: Física pura. Implementação desacoplada (AnalyticEngine) que pode ser substituída por FEM no futuro.
+Verificações ELU:
 
-Controllers: Orquestração e fluxo de dados. Gerencia a otimização e a persistência.
+Flexão normal com tabelas de coeficientes interpoladas.
 
-DTOs: Uso de AnalysisResult para garantir integridade de dados entre camadas.
+Verificação de Cisalhamento ($V_{Rd1}$) com largura efetiva real ($b_w$).
 
-Dados Externos:
+Verificações ELS:
 
-coefficients_table.json: Tabelas de Marcus/Czerny para momentos e reações.
+Flecha Realista: Método da rigidez equivalente de Branson (fissuração) + Fluência.
 
-engineering_catalogs.json: Banco de dados de vigotas, enchimentos (EPS/Cerâmica) e bitolas de aço.
+Fissuração: Estimativa de abertura de fissuras ($w_k$).
 
-3. Funcionalidades de Engenharia (Validado)
+Otimizador Automático: Algoritmo que itera a altura ($h$) para encontrar a solução mais econômica.
 
-Estado Limite Último (ELU)
+2. Modelagem de Pavimento
 
-[x] Cálculo de Esforços: Momentos fletores ($M_x, M_y$) baseados em tabelas de coeficientes com interpolação linear para a relação de vãos ($\lambda$).
+Editor de Grelha: Tabela inteligente para definição de múltiplas lajes.
 
-[x] Dimensionamento à Flexão: Cálculo da área de aço ($A_s$) necessária com verificação de ductilidade (Domínios 2, 3 e 4) e armadura mínima.
+Continuidade Automática: Detecção de lajes vizinhas para gerar engastes e aliviar momentos.
 
-[x] Verificação de Cisalhamento ($V_{Rd1}$): Verificação para lajes sem armadura transversal.
+Cargas de Alvenaria: Ferramenta para desenhar paredes sobre a laje com distribuição automática de carga equivalente ($kN/m \to kN/m^2$).
 
-Destaque: Cálculo correto da largura efetiva ($b_w$) para lajes nervuradas (soma das nervuras), garantindo segurança contra ruptura frágil.
+Balanços: Suporte a bordas livres (marquises) com cálculo isostático.
 
-Estado Limite de Serviço (ELS)
+3. Integração e Exportação
 
-[x] Flecha (Deformação Excessiva): Cálculo rigoroso utilizando a Rigidez Equivalente de Branson ($I_{eq}$).
+JSON para Vigas: Exporta reações de apoio ($kN/m$) e momentos de torção ($kNm/m$) com coordenadas globais para importação em softwares de pórtico.
 
-Considera fissuração ($M_a > M_r$).
+Memorial de Cálculo: Gera relatórios detalhados em Markdown com fórmulas e quantitativos.
 
-Considera fluência (flecha diferida $\alpha_{fl}$).
+🛠️ Instalação e Uso
 
-Correção de unidades do Módulo de Elasticidade ($E_{cs}$) para $kN/m^2$.
+Pré-requisitos
 
-Polimorfismo de Inércia: Lajes treliçadas usam inércia da Seção T homogeneizada.
+Python 3.10 ou superior.
 
-[x] Fissuração (ELS-W): Estimativa da abertura máxima de fissuras ($w_k$) baseada na tensão da armadura na combinação frequente.
+No Linux, bibliotecas gráficas do Qt podem ser necessárias (libxcb-cursor0).
 
-Recursos de Análise
+Instalação
 
-[x] Otimizador Automático: Algoritmo que itera a espessura ($h$) para encontrar a menor altura que satisfaz simultaneamente ELU e ELS.
+# Clone o repositório
+git clone [https://github.com/seu-usuario/PyLaje.git](https://github.com/seu-usuario/PyLaje.git)
+cd PyLaje
 
-[x] Equilíbrio de Cargas (Load Takedown): Cálculo preciso das reações de apoio ($kN/m$) transferidas para as vigas, utilizando o método das áreas de influência (Triângulos e Trapézios).
+# Crie um ambiente virtual (Recomendado)
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# ou .venv\Scripts\activate  # Windows
 
-Validação: A soma das reações iguala a carga total aplicada.
+# Instale as dependências
+pip install -r requirements.txt
 
-[x] Detalhamento Inteligente: Sugestão automática de bitolas e espaçamentos comerciais (ex: $\phi 6.3$ c/15).
 
-[x] Quantitativos: Estimativa de volume de concreto ($m^3$) e peso de aço ($kg/m^2$) para orçamento.
+Executando
 
-4. Interface Gráfica (GUI)
+# Modo Gráfico (GUI)
+python main.py
 
-[x] Interface responsiva em PyQt6.
+# Modo Texto (CLI - Para testes rápidos)
+python main.py --cli
 
-[x] Entrada dinâmica: Campos mudam conforme o tipo de laje (Maciça vs Treliçada).
 
-[x] Seleção de Agregado (Basalto, Granito, etc.) impactando o Módulo de Elasticidade.
+🧩 Estrutura do Projeto (MVC)
 
-[x] Exportação para JSON: Gera arquivo padronizado para integração com módulos futuros (Vigas).
+PyLaje/
+├── app/
+│   ├── models/       # Dados (Laje, Materiais, Geometria)
+│   ├── engines/      # Física (AnalyticEngine NBR 6118)
+│   ├── controllers/  # Orquestração (SlabController)
+│   └── services/     # IO (Memorial, JSON Export, Catálogos)
+├── config/           # Tabelas de Coeficientes e Settings
+├── ui/               # Interface Gráfica (PyQt6)
+│   ├── gui/widgets/  # Canvas de Desenho
+│   └── gui/tabs/     # Abas de Editor e Calculadora
+└── main.py           # Entry Point
 
-5. Próximos Passos (Roadmap)
 
-[ ] Implementação de Editor Visual de Grelha (Continuidade automática entre lajes vizinhas).
+📊 Exemplo de Fluxo de Trabalho
 
-[ ] Adição de Cargas Lineares/Pontuais (Paredes sobre a laje).
+Aba Editor: Defina a geometria das lajes (L1, L2) e desenhe as paredes de alvenaria.
 
-[ ] Verificação de Punção para apoios pontuais.
+Processamento: O sistema detecta que L1 e L2 são vizinhas e cria um engaste entre elas.
 
-Status: Versão estável pronta para commit. Erros críticos de física (unidades de flecha e inércia de nervuradas) foram corrigidos.
+Refinamento: Envie a L1 para a "Calculadora Detalhada", escolha o agregado (Basalto/Granito) e otimize a altura.
+
+Sincronização: Salve os dados otimizados de volta ao pavimento.
+
+Exportação: Gere o arquivo vigas.json com as cargas prontas para o dimensionamento das vigas.
+
+🤝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir Issues ou Pull Requests para adicionar novos métodos de cálculo (ex: FEM) ou melhorias na UI.
+
+📄 Licença
+
+Este projeto está sob a licença MIT.
